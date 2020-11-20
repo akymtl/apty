@@ -1,0 +1,81 @@
+[{
+    "title": "Khartoum",
+    "image": "assets/images/places/khartoum.png",
+    "badges": [
+        "Wellington",
+        "Tianjin"
+    ],
+    "description": "Aenean lacinia bibendum nulla sed consectetur.",
+    "comment": false,
+    "like": false
+},{
+    "title": "Fairbanks",
+    "image": "assets/images/places/fairbanks.png",
+    "badges": [
+        "Belgrade",
+        "Cali",
+        "Stockholm"
+    ],
+    "description": "Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+    "comment": true,
+    "like": false
+},{
+    "title": "Santa Clara",
+    "image": "assets/images/places/santaclara.png",
+    "badges": [
+        "Salt Lake City",
+        "Seville"
+    ],
+    "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
+    "comment": false,
+    "like": false
+},{
+    "title": "Sofia",
+    "image": "assets/images/places/sofia.png",
+    "badges": [
+        "Trondheim",
+        "Xian"
+    ],
+    "description": "Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+    "comment": true,
+    "like": true
+},{
+    "title": "Bengaluru",
+    "image": "assets/images/places/bengaluru.png",
+    "badges": [
+        "Puebla"
+    ],
+    "description": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+    "comment": false,
+    "like": true
+},{
+    "title": "Belfast",
+    "image": "assets/images/places/belfast.png",
+    "badges": [
+        "Aarhus",
+        "Ankara"
+    ],
+    "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.",
+    "comment": false,
+    "like": false
+},{
+    "title": "Portland",
+    "image": "assets/images/places/portland.png",
+    "badges": [
+        "Sacramento",
+        "Osaka",
+        "Astana"
+    ],
+    "description": "Tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+    "comment": true,
+    "like": false
+},{
+    "title": "Pune",
+    "image": "assets/images/places/pune.png",
+    "badges": [
+        "Sylhet"
+    ],
+    "description": "Mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+    "comment": false,
+    "like": true
+}]

@@ -1,0 +1,301 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-container {
+  padding: 1em;
+  background-color: #e7edf6;
+
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
+
+  .sidenav {
+    position: fixed;
+    left: 0;
+    background-image: linear-gradient(135deg, #2b2ecf 0%, #652bcf 100%);
+    border-radius: 20px;
+    width: 100px;
+    height: calc(100vh - 32px);
+    margin-left: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      margin-bottom: 20px;
+
+      &:nth-child(2) {
+        background-color: #ff0066;
+        border-radius: 25px;
+        padding: 10px;
+      }
+
+      &:last-of-type {
+        position: absolute;
+        bottom: 0;
+        left: 41px;
+      }
+    }
+  }
+
+  .content {
+    margin-left: 116px;
+
+    @media screen and (max-width: 480px) {
+      margin-left: 0;
+
+      .mobile {
+        background: url("../assets/images/background\ mobile.png");
+        background-size: cover;
+        height: 450px;
+        display: block;
+        width: 100%;
+
+        &:before {
+          content: url("../assets/images/logo.svg");
+          z-index: 1;
+          position: absolute;
+          top: 1em;
+          left: 1em;
+        }
+
+        &:after {
+          content: url("../assets/icons/menu.svg");
+          z-index: 1;
+          position: absolute;
+          top: 2em;
+          right: 2em;
+        }
+      }
+    }
+
+    .page-title {
+      color: #ff0066;
+      font-family: Poppins;
+      font-size: 36px;
+      font-weight: bold;
+
+      @media screen and (max-width: 480px) {
+        font-size: 42px;
+        text-align: center;
+        color: #fff;
+        margin-top: 175px;
+        display: inline-block;
+      }
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      border-radius: 30px;
+      width: 95px;
+      height: 50px;
+      background-color: #ffffff;
+      float: right;
+      cursor: pointer;
+
+      &:before {
+        content: url("../assets/icons/grid-view-icon.svg");
+        z-index: 1;
+        position: relative;
+        top: 16px;
+        left: 15px;
+      }
+
+      &:after {
+        content: url("../assets/icons/list-view-icon.svg");
+        z-index: 1;
+        position: relative;
+        top: 13px;
+        left: 32px;
+      }
+
+      @media screen and (max-width: 480px) {
+        margin: auto;
+        position: relative;
+        right: 40%;
+        top: -25px;
+      }
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider {
+          background-color: #ccc;
+        }
+
+        &:focus + .slider {
+          box-shadow: 0 0 1px #ccc;
+        }
+
+        &:checked + .slider:before {
+          -webkit-transform: translateX(45px);
+          -ms-transform: translateX(45px);
+          transform: translateX(45px);
+        }
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+
+        &:before {
+          position: absolute;
+          content: "";
+          background-color: #2b2ecf;
+          border-radius: 100%;
+          width: 40px;
+          height: 40px;
+          left: 5px;
+          bottom: 5px;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        /* Rounded sliders */
+        &.round {
+          border-radius: 34px;
+
+          &:before {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    .cards-container {
+      columns: 4;
+      column-gap: 1em;
+      width: 100%;
+      margin: 25px auto;
+      margin-bottom: 0;
+      cursor: pointer;
+
+      @media screen and (max-width: 480px) {
+        columns: 1;
+        column-gap: 0;
+        padding: 1em;
+        box-sizing: border-box;
+      }
+
+      .card {
+        margin-bottom: 1em;
+        display: inline-block;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-sizing: border-box;
+
+        .image {
+          background-size: 100%;
+          width: 100%;
+          height: 149px;
+          border-radius: 10px;
+        }
+
+        .image-list-view {
+          width: 60px;
+          height: 60px;
+        }
+
+        .badge-group {
+          margin-top: 10px;
+
+          .badge {
+            background-color: #f6c937;
+            border-radius: 11.5px;
+            height: 23px;
+            color: #ffffff;
+            font-family: "Open Sans";
+            font-size: 14px;
+            text-align: left;
+            margin-right: 10px;
+            padding: 2px 10px;
+          }
+        }
+
+        .title {
+          color: #2b2ecf;
+          font-family: "Poppins";
+          font-size: 24px;
+          text-align: left;
+          margin: 10px;
+          font-weight: bold;
+        }
+
+        .description {
+          color: #7f8a9c;
+          font-family: "Open Sans";
+          font-size: 18px;
+          line-height: 22px;
+          text-align: left;
+          margin: 10px;
+        }
+
+        .interaction-options {
+          text-align: right;
+          margin: 20px 10px 0 0;
+
+          .comment {
+            height: 18px;
+            width: 18px;
+            margin-right: 20px;
+
+            &.commented {
+              filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+            }
+          }
+
+          .like {
+            height: 19px;
+            width: 22px;
+
+            &.liked {
+              border: 2px solid #ff0066;
+            }
+          }
+        }
+      }      
+
+      .card-list-view {
+        display: flex;
+        box-sizing: border-box;
+        text-align: left;
+
+        div:first-of-type {
+          flex-grow: 1;
+        }
+      }
+
+      .destination-selected {
+        background-image: linear-gradient(135deg, #2b2ecf 0%, #652bcf 100%);
+
+        .title {
+          color: #fff;
+        }
+
+        .description {
+          color: #c5d3e8;
+        }
+      }
+    }
+  }
+}
